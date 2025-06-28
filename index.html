@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Blockchain Workers - Hub Premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HUB Premium</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="hub-wrapper">
-        <div class="hub-intro-container">
-            <h2 class="hub-title">BIENVENUE</h2>
-            <p class="hub-subtitle">
-                Des parcours singuliers au service d’un numérique en mutation. Le Hub Premium vous propose de les explorer, domaine par domaine.
-            </p>
-        </div>
+  <h1>HUB PREMIUM</h1>
+  <p class="hub-subtitle">
+    Des parcours singuliers au service d’un numérique en mutation. Le Hub Premium vous propose de les explorer, domaine par domaine.
+  </p>
 
-        <section class="hub-section">
-            <div class="hub-content-inner">
-                <h2 class="section-title">EXPLORER LES DOMAINES</h2>
-                <p class="section-subtitle">Choisis une spécialité ci-dessous</p>
+  <div class="filters" id="filters"></div>
+  <div class="return-btn" id="return-btn" style="display:none;">
+    <button id="backButton">↩ Retour aux domaines</button>
+  </div>
 
-                <div id="metierGrid" class="metier-grid"></div>
+  <div class="grid" id="member-grid"></div>
 
-                <div id="hubGrid" class="hub-grid"></div>
-
-                <div class="back-button-container">
-                    <button id="backToMetiers" class="back-button">↩ Retour aux domaines</button>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <script src="members-premium.js"></script>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
