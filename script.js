@@ -1,5 +1,5 @@
-// This file contains the data for your members in the Premium Hub.
-// Each object represents a member with their name, role, image, profile link, and profession(s).
+// DONNÉES DES MEMBRES : Votre tableau 'window.members'
+// Il est défini directement ici.
 window.members = [
     {
         nom: "Blaze Aurélien",
@@ -142,3 +142,68 @@ window.members = [
         metier: "Blockchain & Smart Contract"
     }
 ];
+
+// Logique du Hub
+document.addEventListener("DOMContentLoaded", function() {
+    const membersData = window.members; // Récupère les données des membres
+
+    const allMetiers = membersData.flatMap(m => Array.isArray(m.metier) ? m.metier : [m.metier]);
+    const uniqueFilters = [...new Set(allMetiers)].sort();
+
+    const filtersDiv = document.getElementById("filters");
+    const memberGrid = document.getElementById("member-grid");
+    const backButton = document.getElementById("backButton"); // Utilisation de l'ID du bouton
+
+    function renderMembers(list) {
+      memberGrid.innerHTML = "";
+      list.forEach(m => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${m.image}" alt="${m.nom}">
+          <div class="nom">${m.nom}</div>
+          <div class="role">${m.role}</div>
+          <a href="${m.fiche}" target="_blank">Voir la fiche</a>
+        `;
+        memberGrid.appendChild(card);
+      });
+      // Scroll to the grid if on mobile after rendering members
+      if (window.innerWidth <= 768) {
+          const y = memberGrid.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: y - 20, behavior: "smooth" });
+      }
+    }
+
+    function showAll() {
+      renderMembers(membersData);
+      filtersDiv.style.display = "flex";
+      backButton.style.display = "none";
+      // Scroll back to the top of the filtersDiv
+      const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+      const offset = window.innerWidth > 768 ? 100 : 20;
+      window.scrollTo({ top: y - offset, behavior: "smooth" });
+    }
+
+    function filterBy(metier) {
+      const filtered = membersData.filter(m =>
+          Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
+      );
+      renderMembers(filtered);
+      filtersDiv.style.display = "none";
+      backButton.style.display = "block";
+    }
+
+    // Générer les boutons de métier
+    uniqueFilters.forEach(metier => {
+      const btn = document.createElement("button");
+      btn.textContent = metier;
+      btn.onclick = () => filterBy(metier);
+      filtersDiv.appendChild(btn);
+    });
+
+    // Écouteur d'événement pour le bouton de retour
+    backButton.addEventListener("click", showAll);
+
+    // Afficher tous les membres au premier chargement
+    renderMembers(membersData);
+});
