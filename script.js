@@ -1,144 +1,144 @@
-// This file will contain the data for your members.
-// This structure makes it easy to manage your members and their professions.
+// This file contains the data for your members in the Premium Hub.
+// Each object represents a member with their name, role, image, profile link, and profession(s).
 window.members = [
     {
-        nom: "Jane Doe",
-        role: "Experte Blockchain",
-        metier: "Développement Blockchain", // Can be a string
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png", // Replace with actual images
-        fiche: "https://janedoe.com"
-    },
-    {
-        nom: "John Smith",
-        role: "Spécialiste Cybersécurité",
-        metier: "Cybersécurité",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://johnsmith.com"
-    },
-    {
-        nom: "Alice Brown",
-        role: "Développeuse Web3",
-        metier: "Développement Web3",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://alicebrown.com"
-    },
-    {
-        nom: "David Lee",
-        role: "Chercheur en IA",
-        metier: ["Intelligence Artificielle", "Blockchain"], // Can be an array of strings
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://davidlee.com"
+        nom: "Blaze Aurélien",
+        role: "Smart Contract Dev",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "blaze.html",
+        metier: "Blockchain & Smart Contract"
     },
     {
         nom: "Sarah Green",
         role: "UX Designer",
-        metier: "Design & Expérience Utilisateur",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://sarahgreen.com"
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "sarah.html",
+        metier: "UX / UI Design"
     },
     {
         nom: "Michael Johnson",
-        role: "Ingénieur Contrats Intelligents",
-        metier: "Développement Blockchain",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://michaeljohnson.com"
+        role: "Cybersecurity Specialist",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "michael.html",
+        metier: "Cybersécurité"
+    },
+    {
+        nom: "Alice Brown",
+        role: "Web3 Frontend Developer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "alice.html",
+        metier: "Développement Frontend"
+    },
+    {
+        nom: "David Lee",
+        role: "Data Analyst & AI",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "david.html",
+        metier: "Data & Intelligence Artificielle"
     },
     {
         nom: "Emily White",
-        role: "Analyste de Données",
-        metier: "Science des Données",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://emilywhite.com"
+        role: "Motion Designer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "emily.html",
+        metier: "Design & Création Visuelle"
     },
     {
         nom: "Robert Black",
-        role: "Stratège Marketing Web3",
-        metier: ["Marketing Web3", "Communication"],
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://robertblack.com"
+        role: "Blockchain Architect",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "robert.html",
+        metier: "Blockchain & Smart Contract"
     },
     {
         nom: "Laura Adams",
-        role: "Experte Finance & Crypto",
-        metier: ["Finance & Crypto", "Blockchain"],
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://lauraadams.com"
+        role: "Product Designer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "laura.html",
+        metier: "UX / UI Design"
     },
     {
         nom: "Chris Miller",
-        role: "Community Manager",
-        metier: "Community Management",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://chrismiller.com"
+        role: "Community Builder",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "chris.html",
+        metier: "Communication & Community"
     },
     {
         nom: "Daniel Wilson",
-        role: "Ingénieur DevOps",
-        metier: "DevOps",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://danielwilson.com"
+        role: "DevOps Web3",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "daniel.html",
+        metier: "Infrastructure & Cloud"
     },
     {
         nom: "Olivia King",
-        role: "Architecte Cloud",
-        metier: "Cloud Computing",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://oliviaking.com"
+        role: "Cloud Architect",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "olivia.html",
+        metier: "Infrastructure & Cloud"
     },
     {
         nom: "James Wright",
-        role: "Développeur Mobile",
-        metier: "Développement Mobile",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://jameswright.com"
+        role: "Mobile Developer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "james.html",
+        metier: "Développement Frontend"
     },
     {
         nom: "Sophia Hall",
-        role: "Ingénieur Réseaux",
-        metier: "Réseaux & Infrastructure",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://sophiahall.com"
+        role: "Network Engineer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "sophia.html",
+        metier: "Cybersécurité"
     },
     {
         nom: "William Turner",
-        role: "Chercheur Quantique",
-        metier: "Recherche & Innovation",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://williamturner.com"
+        role: "Quantum R&D",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "william.html",
+        metier: "Data & Intelligence Artificielle"
     },
     {
         nom: "Isabella Clark",
-        role: "Spécialiste Bioinformatique",
-        metier: ["Bioinformatique", "Science des Données"],
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://isabellaclark.com"
+        role: "Interaction Designer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "isabella.html",
+        metier: "UX / UI Design"
     },
     {
         nom: "Joseph Lewis",
-        role: "Développeur de Jeux",
-        metier: ["Développement de Jeux", "XR"],
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://josephlewis.com"
+        role: "Game Developer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "joseph.html",
+        metier: "Design & Création Visuelle"
     },
     {
         nom: "Mia Young",
-        role: "Ingénieur Roboticien",
-        metier: "Robotique",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://miayoung.com"
+        role: "XR / VR Designer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "mia.html",
+        metier: "Design & Création Visuelle"
     },
     {
         nom: "Benjamin Scott",
-        role: "Développeur AR/VR",
-        metier: "XR (Réalité Étendue)",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://benjaminscott.com"
+        role: "AR/VR Developer",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "benjamin.html",
+        metier: "Design & Création Visuelle"
     },
     {
         nom: "Charlotte Baker",
         role: "Ethical Hacker",
-        metier: "Cybersécurité",
-        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/avatar_placeholder.png",
-        fiche: "https://charlottebaker.com"
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "charlotte.html",
+        metier: "Cybersécurité"
+    },
+    {
+        nom: "Jane Doe",
+        role: "Blockchain Advisor",
+        image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+        fiche: "jane.html",
+        metier: "Blockchain & Smart Contract"
     }
 ];
