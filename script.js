@@ -20,40 +20,39 @@ window.members = [
     metier: "Cybersécurité",
     image: "https://www.weebly.com/editor/uploads/.../logo_BW_WEB_200x200.jpg",
     fiche: "michael.html"
-  },
-  // ... complète avec le reste de tes membres ici
+  }
 ];
 
 // ✅ LOGIQUE DU HUB PREMIUM
 document.addEventListener("DOMContentLoaded", function () {
+  const metierGrid = document.getElementById("metierGrid");     // anciennement filters
+  const hubGrid = document.getElementById("hubGrid");           // anciennement memberGrid
+  const backBtn = document.getElementById("backToMetiers");     // anciennement backButton
   const membersData = window.members;
-  const filtersDiv = document.getElementById("filters");
-  const memberGrid = document.getElementById("member-grid");
-  const backButton = document.getElementById("backButton");
 
-  // Cacher les zones au départ
-  memberGrid.style.display = "none";
-  backButton.style.display = "none";
+  if (!metierGrid || !hubGrid || !backBtn || !Array.isArray(membersData)) {
+    console.warn("⚠️ Composants manquants ou données incorrectes");
+    return;
+  }
 
   // Extraire les métiers uniques
-  const allMetiers = membersData.flatMap(m =>
-    Array.isArray(m.metier) ? m.metier : [m.metier]
-  );
-  const uniqueFilters = [...new Set(allMetiers)].sort();
+  const uniqueMetiers = [...new Set(
+    membersData.flatMap(m =>
+      Array.isArray(m.metier) ? m.metier : [m.metier]
+    )
+  )];
 
   // Générer les boutons métiers
-  uniqueFilters.forEach(metier => {
-    const btn = document.createElement("button");
+  uniqueMetiers.forEach((metier, index) => {
+    const btn = document.createElement("div");
+    btn.className = "metier-btn";
     btn.textContent = metier;
-    btn.onclick = () => {
-      document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      filterBy(metier);
-    };
-    filtersDiv.appendChild(btn);
+    if (index === 0) btn.id = "firstMetier";
+    btn.onclick = () => filterBy(metier);
+    metierGrid.appendChild(btn);
   });
 
-  // Affiche les membres d’un métier
+  // Affiche les membres par métier
   function filterBy(metier) {
     const filtered = membersData.filter(m =>
       Array.isArray(m.metier)
@@ -62,46 +61,40 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     renderMembers(filtered);
-    filtersDiv.style.display = "none";
-    memberGrid.style.display = "grid";
-    backButton.style.display = "block";
+    hubGrid.style.display = "grid";
+    hubGrid.classList.add("hub-visible");
   }
 
-  // Bouton retour aux métiers
-  backButton.addEventListener("click", showAll);
-
-  function showAll() {
-    memberGrid.innerHTML = "";
-    filtersDiv.style.display = "flex";
-    memberGrid.style.display = "none";
-    backButton.style.display = "none";
-
-    document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
-
-    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-    const offset = window.innerWidth > 768 ? 100 : 20;
-    window.scrollTo({ top: y - offset, behavior: "smooth" });
-  }
-
-  // Injection HTML des fiches membres
+  // Affiche les cartes membres
   function renderMembers(list) {
-    memberGrid.innerHTML = "";
+    hubGrid.innerHTML = "";
     list.forEach(m => {
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <img src="${m.image}" alt="${m.nom}">
-        <div class="nom">${m.nom}</div>
-        <div class="role">${m.role}</div>
-        <a href="${m.fiche}" target="_blank">Voir la fiche</a>
+      const bloc = document.createElement("div");
+      bloc.className = "member-block";
+      bloc.innerHTML = `
+        <div class="member-photo" style="background-image:url('${m.image}')"></div>
+        <div class="member-name">${m.nom}</div>
+        <div class="member-role">${m.role}</div>
+        <a href="${m.fiche}" class="view-link" target="_blank">Voir la fiche</a>
       `;
-      memberGrid.appendChild(card);
+      hubGrid.appendChild(bloc);
     });
 
-    // Scroll sur mobile vers la grille
+    // Scroll vers la grille sur mobile
     if (window.innerWidth <= 768) {
-      const y = memberGrid.getBoundingClientRect().top + window.scrollY;
+      const y = hubGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
     }
   }
+
+  // Bouton retour
+  backBtn.addEventListener("click", function () {
+    hubGrid.innerHTML = "";
+    hubGrid.style.display = "none";
+    hubGrid.classList.remove("hub-visible");
+
+    const y = metierGrid.getBoundingClientRect().top + window.scrollY;
+    const offset = window.innerWidth > 768 ? 100 : 30;
+    window.scrollTo({ top: y - offset, behavior: "smooth" });
+  });
 });
