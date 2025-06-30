@@ -4,34 +4,34 @@ window.members = [
     nom: "Blaze Aurélien",
     role: "Smart Contract Dev",
     metier: "Blockchain & Smart Contract",
-    image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+    image: "https://www.weebly.com/editor/uploads/.../logo_BW_WEB_200x200.jpg",
     fiche: "blaze.html"
   },
   {
     nom: "Sarah Green",
     role: "UX Designer",
     metier: "UX / UI Design",
-    image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+    image: "https://www.weebly.com/editor/uploads/.../logo_BW_WEB_200x200.jpg",
     fiche: "sarah.html"
   },
   {
     nom: "Michael Johnson",
     role: "Cybersecurity Specialist",
     metier: "Cybersécurité",
-    image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
+    image: "https://www.weebly.com/editor/uploads/.../logo_BW_WEB_200x200.jpg",
     fiche: "michael.html"
   },
-  // (... les autres membres — garde ton tableau tel quel ici)
+  // ... complète avec le reste de tes membres ici
 ];
 
-// ✅ LOGIQUE DU HUB
+// ✅ LOGIQUE DU HUB PREMIUM
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
-  // Cacher la grille au départ
+  // Cacher les zones au départ
   memberGrid.style.display = "none";
   backButton.style.display = "none";
 
@@ -41,15 +41,19 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
-  // Création des boutons métiers
+  // Générer les boutons métiers
   uniqueFilters.forEach(metier => {
     const btn = document.createElement("button");
     btn.textContent = metier;
-    btn.onclick = () => filterBy(metier);
+    btn.onclick = () => {
+      document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      filterBy(metier);
+    };
     filtersDiv.appendChild(btn);
   });
 
-  // Affiche les membres filtrés
+  // Affiche les membres d’un métier
   function filterBy(metier) {
     const filtered = membersData.filter(m =>
       Array.isArray(m.metier)
@@ -63,22 +67,23 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.style.display = "block";
   }
 
-  // Affiche tous les membres (retour)
+  // Bouton retour aux métiers
+  backButton.addEventListener("click", showAll);
+
   function showAll() {
     memberGrid.innerHTML = "";
     filtersDiv.style.display = "flex";
     memberGrid.style.display = "none";
     backButton.style.display = "none";
 
-    // Scroll vers les filtres
+    document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
+
     const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
     const offset = window.innerWidth > 768 ? 100 : 20;
     window.scrollTo({ top: y - offset, behavior: "smooth" });
   }
 
-  backButton.addEventListener("click", showAll);
-
-  // Injection des fiches
+  // Injection HTML des fiches membres
   function renderMembers(list) {
     memberGrid.innerHTML = "";
     list.forEach(m => {
@@ -93,16 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
       memberGrid.appendChild(card);
     });
 
+    // Scroll sur mobile vers la grille
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
     }
   }
-});
-document.querySelectorAll('.filters button').forEach(btn => {
-  btn.onclick = () => {
-    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    filterBy(btn.textContent);
-  };
 });
