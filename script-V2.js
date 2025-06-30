@@ -203,3 +203,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Écouteur d'événement pour le bouton de retour
     backButton.addEventListener("click", showAll);
+backButton.addEventListener("click", showAll);
+});
