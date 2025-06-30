@@ -99,3 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    filterBy(btn.textContent);
+  };
+});
