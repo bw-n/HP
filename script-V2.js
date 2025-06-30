@@ -203,5 +203,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   backButton.addEventListener("click", showAll);
 
-  console.log("✅ script-V3.js chargé avec", window.members.length, "membres");
+  console.log("✅ script-V2.js chargé avec", window.members.length, "membres");
 });
