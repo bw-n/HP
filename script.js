@@ -25,9 +25,9 @@ window.members = [
 
 // ✅ LOGIQUE DU HUB PREMIUM
 document.addEventListener("DOMContentLoaded", function () {
-  const metierGrid = document.getElementById("metierGrid");     // anciennement filters
-  const hubGrid = document.getElementById("hubGrid");           // anciennement memberGrid
-  const backBtn = document.getElementById("backToMetiers");     // anciennement backButton
+  const metierGrid = document.getElementById("metierGrid");
+  const hubGrid = document.getElementById("hubGrid");
+  const backBtn = document.getElementById("backToMetiers");
   const membersData = window.members;
 
   if (!metierGrid || !hubGrid || !backBtn || !Array.isArray(membersData)) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     )
   )];
 
-  // Générer les boutons métiers
+  // Créer les boutons de métiers
   uniqueMetiers.forEach((metier, index) => {
     const btn = document.createElement("div");
     btn.className = "metier-btn";
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     metierGrid.appendChild(btn);
   });
 
-  // Affiche les membres par métier
+  // Afficher les membres filtrés
   function filterBy(metier) {
     const filtered = membersData.filter(m =>
       Array.isArray(m.metier)
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
     hubGrid.classList.add("hub-visible");
   }
 
-  // Affiche les cartes membres
+  // Générer les cartes membres
   function renderMembers(list) {
     hubGrid.innerHTML = "";
     list.forEach(m => {
@@ -80,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function () {
       hubGrid.appendChild(bloc);
     });
 
-    // Scroll vers la grille sur mobile
     if (window.innerWidth <= 768) {
       const y = hubGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
