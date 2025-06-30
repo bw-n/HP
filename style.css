@@ -171,3 +171,8 @@ h1 {
     font-size: 0.85rem;
   }
 }
+.filters button.active {
+  background: #00e6ff;
+  color: #000;
+  box-shadow: 0 0 6px #00e6ff99;
+}
