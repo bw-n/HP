@@ -203,7 +203,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Écouteur d'événement pour le bouton de retour
     backButton.addEventListener("click", showAll);
-
-    // Afficher tous les membres au premier chargement
-    renderMembers(membersData);
-});
