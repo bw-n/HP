@@ -156,6 +156,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
+  if (!filtersDiv || !memberGrid || !backButton) {
+    console.warn("Certains éléments HTML manquent : vérifie l'existence des IDs filters, member-grid et backButton.");
+    return;
+  }
+
   // Afficher les membres passés en liste
   function renderMembers(list) {
     memberGrid.innerHTML = "";
