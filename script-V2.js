@@ -146,6 +146,7 @@ window.members = [
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
 
+  // Extraire la liste unique des métiers
   const allMetiers = membersData.flatMap(m =>
     Array.isArray(m.metier) ? m.metier : [m.metier]
   );
@@ -155,16 +156,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
+  // Afficher les membres passés en liste
   function renderMembers(list) {
     memberGrid.innerHTML = "";
+    if (list.length === 0) {
+      memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
+      return;
+    }
     list.forEach(m => {
       const card = document.createElement("div");
       card.className = "card";
       card.innerHTML = `
-        <img src="${m.image}" alt="${m.nom}">
+        <img src="${m.image}" alt="Photo de ${m.nom}">
         <div class="nom">${m.nom}</div>
         <div class="role">${m.role}</div>
-        <a href="${m.fiche}" target="_blank">Voir la fiche</a>
+        <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
       `;
       memberGrid.appendChild(card);
     });
@@ -175,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Afficher tous les membres et ré-afficher les filtres
   function showAll() {
     renderMembers(membersData);
     filtersDiv.style.display = "flex";
@@ -185,6 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: y - offset, behavior: "smooth" });
   }
 
+  // Filtrer les membres par métier sélectionné
   function filterBy(metier) {
     const filtered = membersData.filter(m =>
       Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
@@ -194,6 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.style.display = "block";
   }
 
+  // Créer un bouton pour chaque métier unique dans le filtre
   uniqueFilters.forEach(metier => {
     const btn = document.createElement("button");
     btn.textContent = metier;
@@ -201,7 +210,11 @@ document.addEventListener("DOMContentLoaded", function () {
     filtersDiv.appendChild(btn);
   });
 
+  // Bouton retour
   backButton.addEventListener("click", showAll);
+
+  // Afficher tous les membres par défaut au chargement
+  showAll();
 
   console.log("✅ script-V2.js chargé avec", window.members.length, "membres");
 });
