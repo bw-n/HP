@@ -4,140 +4,140 @@ window.members = [
     nom: "Blaze Aurélien",
     role: "Smart Contract Dev",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "blaze.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Blockchain & Smart Contract"
   },
   {
     nom: "Sarah Green",
     role: "UX Designer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "sarah.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "UX / UI Design"
   },
   {
     nom: "Michael Johnson",
     role: "Cybersecurity Specialist",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "michael.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Cybersécurité"
   },
   {
     nom: "Alice Brown",
     role: "Web3 Frontend Developer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "alice.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Développement Frontend"
   },
   {
     nom: "David Lee",
     role: "Data Analyst & AI",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "david.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Data & Intelligence Artificielle"
   },
   {
     nom: "Emily White",
     role: "Motion Designer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "emily.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Design & Création Visuelle"
   },
   {
     nom: "Robert Black",
     role: "Blockchain Architect",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "robert.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Blockchain & Smart Contract"
   },
   {
     nom: "Laura Adams",
     role: "Product Designer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "laura.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "UX / UI Design"
   },
   {
     nom: "Chris Miller",
     role: "Community Builder",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "chris.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Communication & Community"
   },
   {
     nom: "Daniel Wilson",
     role: "DevOps Web3",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "daniel.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Infrastructure & Cloud"
   },
   {
     nom: "Olivia King",
     role: "Cloud Architect",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "olivia.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Infrastructure & Cloud"
   },
   {
     nom: "James Wright",
     role: "Mobile Developer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "james.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Développement Frontend"
   },
   {
     nom: "Sophia Hall",
     role: "Network Engineer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "sophia.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Cybersécurité"
   },
   {
     nom: "William Turner",
     role: "Quantum R&D",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "william.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Data & Intelligence Artificielle"
   },
   {
     nom: "Isabella Clark",
     role: "Interaction Designer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "isabella.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "UX / UI Design"
   },
   {
     nom: "Joseph Lewis",
     role: "Game Developer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "joseph.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Design & Création Visuelle"
   },
   {
     nom: "Mia Young",
     role: "XR / VR Designer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "mia.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Design & Création Visuelle"
   },
   {
     nom: "Benjamin Scott",
     role: "AR/VR Developer",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "benjamin.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Design & Création Visuelle"
   },
   {
     nom: "Charlotte Baker",
     role: "Ethical Hacker",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "charlotte.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Cybersécurité"
   },
   {
     nom: "Jane Doe",
     role: "Blockchain Advisor",
     image: "https://www.weebly.com/editor/uploads/9/7/1/8/9718598/custom_themes/990953050610449310/files/logo_BW_WEB_200x200.jpg",
-    fiche: "jane.html",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html#/",
     metier: "Blockchain & Smart Contract"
   }
 ];
