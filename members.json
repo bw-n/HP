@@ -1,0 +1,142 @@
+[
+  {
+    "nom": "Blaze Aurélien",
+    "role": "Smart Contract Dev",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Blockchain & Smart Contract"
+  },
+  {
+    "nom": "Sarah Green",
+    "role": "UX Designer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "UX / UI Design"
+  },
+  {
+    "nom": "Michael Johnson",
+    "role": "Cybersecurity Specialist",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Cybersécurité"
+  },
+  {
+    "nom": "Alice Brown",
+    "role": "Web3 Frontend Developer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Développement Frontend"
+  },
+  {
+    "nom": "David Lee",
+    "role": "Data Analyst & AI",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Data & Intelligence Artificielle"
+  },
+  {
+    "nom": "Emily White",
+    "role": "Motion Designer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Design & Création Visuelle"
+  },
+  {
+    "nom": "Robert Black",
+    "role": "Blockchain Architect",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Blockchain & Smart Contract"
+  },
+  {
+    "nom": "Laura Adams",
+    "role": "Product Designer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "UX / UI Design"
+  },
+  {
+    "nom": "Chris Miller",
+    "role": "Community Builder",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Communication & Community"
+  },
+  {
+    "nom": "Daniel Wilson",
+    "role": "DevOps Web3",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Infrastructure & Cloud"
+  },
+  {
+    "nom": "Olivia King",
+    "role": "Cloud Architect",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Infrastructure & Cloud"
+  },
+  {
+    "nom": "James Wright",
+    "role": "Mobile Developer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Développement Frontend"
+  },
+  {
+    "nom": "Sophia Hall",
+    "role": "Network Engineer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Cybersécurité"
+  },
+  {
+    "nom": "William Turner",
+    "role": "Quantum R&D",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Data & Intelligence Artificielle"
+  },
+  {
+    "nom": "Isabella Clark",
+    "role": "Interaction Designer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "UX / UI Design"
+  },
+  {
+    "nom": "Joseph Lewis",
+    "role": "Game Developer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Design & Création Visuelle"
+  },
+  {
+    "nom": "Mia Young",
+    "role": "XR / VR Designer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Design & Création Visuelle"
+  },
+  {
+    "nom": "Benjamin Scott",
+    "role": "AR/VR Developer",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Design & Création Visuelle"
+  },
+  {
+    "nom": "Charlotte Baker",
+    "role": "Ethical Hacker",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Cybersécurité"
+  },
+  {
+    "nom": "Jane Doe",
+    "role": "Blockchain Advisor",
+    "image": "https:",
+    "fiche": "https:",
+    "metier": "Blockchain & Smart Contract"
+  }
+]
