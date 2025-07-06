@@ -223,3 +223,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   console.log("✅ script-V2.js chargé avec", window.members.length, "membres");
 });
+]
