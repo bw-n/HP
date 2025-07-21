@@ -236,107 +236,79 @@ window.members = [
 
 // LOGIQUE DU HUB
 document.addEventListener("DOMContentLoaded", function () {
-  const membersData = window.members;
-
-  // Extraire tous les métiers
-  let allMetiers = membersData.flatMap(m =>
-    Array.isArray(m.metier) ? m.metier : [m.metier]
-  );
-
-  // Ajouter "ELITE" si au moins un membre est elite
-  const hasElite = membersData.some(m => m.elite);
-  if (hasElite) allMetiers.push("ELITE");
-
-  const uniqueFilters = [...new Set(allMetiers)].sort();
-
-  // Récupérer les éléments DOM
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
   if (!filtersDiv || !memberGrid || !backButton) {
-    console.warn("Certains éléments HTML manquent (filters, member-grid ou backButton).");
+    console.warn("Certains éléments HTML manquent : vérifie l'existence des IDs filters, member-grid et backButton.");
     return;
   }
 
-  // Fonction d'affichage des membres
-  function renderMembers(list) {
-    memberGrid.innerHTML = "";
+  // Charger les membres depuis un fichier JSON externe
+  fetch("members.json")
+    .then(response => response.json())
+    .then(membersData => {
+      const allMetiers = membersData.flatMap(m =>
+        Array.isArray(m.metier) ? m.metier : [m.metier]
+      );
+      const uniqueFilters = [...new Set(allMetiers)].sort();
 
-    if (list.length === 0) {
-      memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
-      return;
-    }
+      function renderMembers(list) {
+        memberGrid.innerHTML = "";
+        if (list.length === 0) {
+          memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
+          return;
+        }
+        list.forEach(m => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="${m.image}" alt="Photo de ${m.nom}">
+            <div class="nom">${m.nom}</div>
+            <div class="role">${m.role}</div>
+            <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+          `;
+          memberGrid.appendChild(card);
+        });
 
-    list.forEach(m => {
-      const card = document.createElement("div");
-      card.className = "member-block" + (m.elite ? " elite" : "");
+        if (window.innerWidth <= 768) {
+          const y = memberGrid.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: y - 20, behavior: "smooth" });
+        }
+      }
 
-      const lien = m.fiche || m.website || "#";
-      const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
+      function showAll() {
+        renderMembers(membersData);
+        filtersDiv.style.display = "flex";
+        backButton.style.display = "none";
+        const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+        const offset = window.innerWidth > 768 ? 100 : 20;
+        window.scrollTo({ top: y - offset, behavior: "smooth" });
+      }
 
-      card.innerHTML = `
-        <div class="member-photo" style="background-image: url('${m.image}')"></div>
-        <div class="member-name">${m.nom}</div>
-        <div class="member-role">${roles}</div>
-        <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-      `;
-
-      memberGrid.appendChild(card);
-    });
-
-    // Scroll automatique sur mobile
-    if (window.innerWidth <= 768) {
-      const y = memberGrid.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: y - 20, behavior: "smooth" });
-    }
-  }
-
-  function showAll() {
-    renderMembers(membersData);
-    filtersDiv.style.display = "flex";
-    backButton.style.display = "none";
-
-    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-    const offset = window.innerWidth > 768 ? 100 : 20;
-    window.scrollTo({ top: y - offset, behavior: "smooth" });
-  }
-
-  function filterBy(metier) {
-    const filtered = metier === "ELITE"
-      ? membersData.filter(m => m.elite)
-      : membersData.filter(m =>
+      function filterBy(metier) {
+        const filtered = membersData.filter(m =>
           Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
         );
+        renderMembers(filtered);
+        filtersDiv.style.display = "none";
+        backButton.style.display = "block";
+      }
 
-    renderMembers(filtered);
-    filtersDiv.style.display = "none";
-    backButton.style.display = "block";
-  }
+      uniqueFilters.forEach(metier => {
+        const btn = document.createElement("button");
+        btn.textContent = metier;
+        btn.onclick = () => filterBy(metier);
+        filtersDiv.appendChild(btn);
+      });
 
-  // Nettoyer filtersDiv avant ajout (utile si rechargement du script)
-  filtersDiv.innerHTML = "";
+      backButton.addEventListener("click", showAll);
+      showAll();
 
-  // Bouton "Tous" pour réafficher tous les membres
-  const allBtn = document.createElement("button");
-  allBtn.textContent = "Tous";
-  allBtn.onclick = showAll;
-  filtersDiv.appendChild(allBtn);
-
-  // Boutons filtres métier
-  uniqueFilters.forEach(metier => {
-    const btn = document.createElement("button");
-    btn.textContent = metier;
-    btn.onclick = () => filterBy(metier);
-    if (metier === "ELITE") btn.classList.add("elite-btn");
-    filtersDiv.appendChild(btn);
-  });
-
-  // Bouton retour
-  backButton.addEventListener("click", showAll);
-
-  // Affichage initial
-  showAll();
-
-  console.log("✅ Script chargé avec", membersData.length, "membres");
+      console.log("✅ script.js chargé avec", membersData.length, "membres");
+    })
+    .catch(error => {
+      console.error("❌ Erreur lors du chargement des membres :", error);
+    });
 });
