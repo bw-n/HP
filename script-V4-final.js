@@ -245,70 +245,74 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Charger les membres depuis un fichier JSON externe
-  fetch("members.json")
-    .then(response => response.json())
-    .then(membersData => {
-      const allMetiers = membersData.flatMap(m =>
-        Array.isArray(m.metier) ? m.metier : [m.metier]
-      );
-      const uniqueFilters = [...new Set(allMetiers)].sort();
+  const membersData = window.members;
 
-      function renderMembers(list) {
-        memberGrid.innerHTML = "";
-        if (list.length === 0) {
-          memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
-          return;
-        }
-        list.forEach(m => {
-          const card = document.createElement("div");
-          card.className = "card";
-          card.innerHTML = `
-            <img src="${m.image}" alt="Photo de ${m.nom}">
-            <div class="nom">${m.nom}</div>
-            <div class="role">${m.role}</div>
-            <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-          `;
-          memberGrid.appendChild(card);
-        });
+  // Récupérer tous les métiers uniques pour les filtres
+  const allMetiers = membersData.flatMap(m =>
+    Array.isArray(m.metier) ? m.metier : [m.metier]
+  );
+  const uniqueFilters = [...new Set(allMetiers)].sort();
 
-        if (window.innerWidth <= 768) {
-          const y = memberGrid.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({ top: y - 20, behavior: "smooth" });
-        }
-      }
-
-      function showAll() {
-        renderMembers(membersData);
-        filtersDiv.style.display = "flex";
-        backButton.style.display = "none";
-        const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-        const offset = window.innerWidth > 768 ? 100 : 20;
-        window.scrollTo({ top: y - offset, behavior: "smooth" });
-      }
-
-      function filterBy(metier) {
-        const filtered = membersData.filter(m =>
-          Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
-        );
-        renderMembers(filtered);
-        filtersDiv.style.display = "none";
-        backButton.style.display = "block";
-      }
-
-      uniqueFilters.forEach(metier => {
-        const btn = document.createElement("button");
-        btn.textContent = metier;
-        btn.onclick = () => filterBy(metier);
-        filtersDiv.appendChild(btn);
-      });
-
-      backButton.addEventListener("click", showAll);
-      showAll();
-
-      console.log("✅ script.js chargé avec", membersData.length, "membres");
-    })
-    .catch(error => {
-      console.error("❌ Erreur lors du chargement des membres :", error);
+  // Fonction pour afficher les membres donnés en paramètre
+  function renderMembers(list) {
+    memberGrid.innerHTML = "";
+    if (list.length === 0) {
+      memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
+      return;
+    }
+    list.forEach(m => {
+      const card = document.createElement("div");
+      card.className = "card";
+      const roleText = Array.isArray(m.role) ? m.role.join(", ") : m.role;
+      card.innerHTML = `
+        <img src="${m.image}" alt="Photo de ${m.nom}">
+        <div class="nom">${m.nom}</div>
+        <div class="role">${roleText}</div>
+        <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+      `;
+      memberGrid.appendChild(card);
     });
+
+    // Scroll smooth sur mobile
+    if (window.innerWidth <= 768) {
+      const y = memberGrid.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: y - 20, behavior: "smooth" });
+    }
+  }
+
+  // Afficher tous les membres et les filtres
+  function showAll() {
+    renderMembers(membersData);
+    filtersDiv.style.display = "flex";
+    backButton.style.display = "none";
+    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+    const offset = window.innerWidth > 768 ? 100 : 20;
+    window.scrollTo({ top: y - offset, behavior: "smooth" });
+  }
+
+  // Filtrer par métier et afficher le résultat
+  function filterBy(metier) {
+    const filtered = membersData.filter(m =>
+      Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
+    );
+    renderMembers(filtered);
+    filtersDiv.style.display = "none";
+    backButton.style.display = "block";
+  }
+
+  // Création des boutons filtres dynamiques
+  uniqueFilters.forEach(metier => {
+    const btn = document.createElement("button");
+    btn.textContent = metier;
+    btn.onclick = () => filterBy(metier);
+    filtersDiv.appendChild(btn);
+  });
+
+  // Bouton retour à tous les membres
+  backButton.addEventListener("click", showAll);
+
+  // Affichage initial
+  showAll();
+
+  console.log("✅ script chargé avec", membersData.length, "membres");
 });
