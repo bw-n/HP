@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
-  // Éléments du DOM
+  // DOM Elements
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  // Rendu des membres
+  // Fonction d'affichage des membres
   function renderMembers(list) {
     memberGrid.innerHTML = "";
 
@@ -269,24 +269,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     list.forEach(m => {
-  const card = document.createElement("div");
-  card.className = "member-block" + (m.elite ? " elite" : "");
+      const card = document.createElement("div");
+      card.className = "member-block" + (m.elite ? " elite" : "");
 
-  const lien = m.fiche || m.website || "#";
-  const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
+      const lien = m.fiche || m.website || "#";
+      const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
 
-  card.innerHTML = `
-    <div class="member-photo" style="background-image: url('${m.image}')"></div>
-    <div class="member-name">${m.nom}</div>
-    <div class="member-role">${roles}</div>
-    <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-  `;
+      card.innerHTML = `
+        <div class="member-photo" style="background-image: url('${m.image}')"></div>
+        <div class="member-name">${m.nom}</div>
+        <div class="member-role">${roles}</div>
+        <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+      `;
 
-  memberGrid.appendChild(card);
-});
+      memberGrid.appendChild(card);
+    });
 
-
-    // Scroll auto sur mobile
+    // Scroll automatique sur mobile
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
@@ -315,7 +314,13 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.style.display = "block";
   }
 
-  // Créer les boutons filtres
+  // Bouton "Tous" pour réafficher tous les membres
+  const allBtn = document.createElement("button");
+  allBtn.textContent = "Tous";
+  allBtn.onclick = showAll;
+  filtersDiv.appendChild(allBtn);
+
+  // Boutons filtres métier
   uniqueFilters.forEach(metier => {
     const btn = document.createElement("button");
     btn.textContent = metier;
