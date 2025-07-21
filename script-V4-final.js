@@ -234,8 +234,20 @@ window.members = [
   }
 ];
 
-// LOGIQUE DU HUB
+// Logique du Hub
 document.addEventListener("DOMContentLoaded", function () {
+  const membersData = window.members;
+
+  const allMetiers = membersData.flatMap(m =>
+    Array.isArray(m.metier) ? m.metier : [m.metier]
+  );
+
+  // Ajouter "ELITE" comme filtre si au moins un membre est elite
+  const hasElite = membersData.some(m => m.elite);
+  if (hasElite) allMetiers.push("ELITE");
+
+  const uniqueFilters = [...new Set(allMetiers)].sort();
+
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
@@ -245,15 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  const membersData = window.members;
-
-  // Récupérer tous les métiers uniques pour les filtres
-  const allMetiers = membersData.flatMap(m =>
-    Array.isArray(m.metier) ? m.metier : [m.metier]
-  );
-  const uniqueFilters = [...new Set(allMetiers)].sort();
-
-  // Fonction pour afficher les membres donnés en paramètre
   function renderMembers(list) {
     memberGrid.innerHTML = "";
     if (list.length === 0) {
@@ -262,57 +265,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     list.forEach(m => {
       const card = document.createElement("div");
-      card.className = "card";
-      const roleText = Array.isArray(m.role) ? m.role.join(", ") : m.role;
-      card.innerHTML = `
-        <img src="${m.image}" alt="Photo de ${m.nom}">
-        <div class="nom">${m.nom}</div>
-        <div class="role">${roleText}</div>
-        <a href="${m.fiche}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-      `;
+      card.className = "member-block" + (m.elite ? " elite" : "");
+      card.innerHTML =
+        '<div class="member-photo" style="background-image:url(' + m.image + ')"></div>' +
+        '<div class="member-name">' + m.nom + '</div>' +
+        '<div class="member-role">' + m.role + '</div>' +
+        '<a class="view-link" href="' + m.fiche + '" target="_blank" rel="noopener noreferrer">Voir la fiche</a>';
       memberGrid.appendChild(card);
     });
 
-    // Scroll smooth sur mobile
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
     }
   }
 
-  // Afficher tous les membres et les filtres
-  function showAll() {
-    renderMembers(membersData);
-    filtersDiv.style.display = "flex";
-    backButton.style.display = "none";
-    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-    const offset = window.innerWidth > 768 ? 100 : 20;
-    window.scrollTo({ top: y - offset, behavior: "smooth" });
-  }
-
-  // Filtrer par métier et afficher le résultat
   function filterBy(metier) {
-    const filtered = membersData.filter(m =>
-      Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
-    );
+    const filtered = metier === "ELITE"
+      ? membersData.filter(m => m.elite)
+      : membersData.filter(m =>
+          Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
+        );
     renderMembers(filtered);
-    filtersDiv.style.display = "none";
-    backButton.style.display = "block";
   }
 
-  // Création des boutons filtres dynamiques
+  backButton.addEventListener("click", () => {
+  const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+  const offset = window.innerWidth > 768 ? 100 : 20;
+  window.scrollTo({ top: y - offset, behavior: "smooth" });
+});
+
   uniqueFilters.forEach(metier => {
-    const btn = document.createElement("button");
-    btn.textContent = metier;
-    btn.onclick = () => filterBy(metier);
-    filtersDiv.appendChild(btn);
-  });
+  const btn = document.createElement("button");
+  btn.textContent = metier;
+  btn.onclick = () => filterBy(metier);
+  if (metier === "ELITE") btn.classList.add("elite-btn");
+  filtersDiv.appendChild(btn);
+});
 
-  // Bouton retour à tous les membres
-  backButton.addEventListener("click", showAll);
-
-  // Affichage initial
-  showAll();
-
-  console.log("✅ script chargé avec", membersData.length, "membres");
+  console.log("✅ script-V4-final.js chargé avec", membersData.length, "membres");
 });
