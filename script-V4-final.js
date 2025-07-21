@@ -249,13 +249,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
-  // DOM Elements
+  // Récupérer les éléments DOM
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
   if (!filtersDiv || !memberGrid || !backButton) {
-    console.warn("Certains éléments HTML manquent.");
+    console.warn("Certains éléments HTML manquent (filters, member-grid ou backButton).");
     return;
   }
 
@@ -313,6 +313,9 @@ document.addEventListener("DOMContentLoaded", function () {
     filtersDiv.style.display = "none";
     backButton.style.display = "block";
   }
+
+  // Nettoyer filtersDiv avant ajout (utile si rechargement du script)
+  filtersDiv.innerHTML = "";
 
   // Bouton "Tous" pour réafficher tous les membres
   const allBtn = document.createElement("button");
