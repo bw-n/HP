@@ -1,11 +1,18 @@
 // DONNÉES DES MEMBRES
 window.members = [
   {
-    nom: "Your Name",
-    role: "Smart Contract Dev",
-    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
-    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
-    metier: "Blockchain & Smart Contract",
+    nom: "JoweL Homeskillz",
+    role: ["Dev", "creative 360", "founder"],
+    image: "https://www.jow-l.com/uploads/9/7/1/8/9718598/published/homeskillz-450px-2017-discogs.jpg?1716919812",
+    fiche: "https://www.jow-l.com/",
+    metier: ["Dev", "creative 360"]
+  },
+  {
+    nom: "Ethabo Jackson",
+    role: ["Security Bodyguard"],
+    image: "https://raw.githubusercontent.com/bw-n/HP-final/main/ethabo-jackson.jpg",
+    fiche: "https://www.instagram.com/ethabojackson/?igsh=MW9xM3IzcmE3MHN0Yw%3D%3D#",
+    metier: ["Security Bodyguard"],
     elite: true
   },
   {
@@ -231,46 +238,67 @@ window.members = [
 document.addEventListener("DOMContentLoaded", function () {
   const membersData = window.members;
 
-  const allMetiers = membersData.flatMap(m =>
+  // Récupérer tous les métiers
+  let allMetiers = membersData.flatMap(m =>
     Array.isArray(m.metier) ? m.metier : [m.metier]
   );
 
-  // Ajouter "ELITE" comme filtre si au moins un membre est elite
+  // Ajouter le filtre "ELITE" si un membre l'est
   const hasElite = membersData.some(m => m.elite);
   if (hasElite) allMetiers.push("ELITE");
 
   const uniqueFilters = [...new Set(allMetiers)].sort();
 
+  // Sélection des éléments
   const filtersDiv = document.getElementById("filters");
   const memberGrid = document.getElementById("member-grid");
   const backButton = document.getElementById("backButton");
 
   if (!filtersDiv || !memberGrid || !backButton) {
-    console.warn("Certains éléments HTML manquent : vérifie l'existence des IDs filters, member-grid et backButton.");
+    console.warn("Certains éléments HTML manquent.");
     return;
   }
 
+  // Affiche les membres donnés
   function renderMembers(list) {
     memberGrid.innerHTML = "";
+
     if (list.length === 0) {
       memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
       return;
     }
+
     list.forEach(m => {
       const card = document.createElement("div");
-      card.className = "member-block" + (m.elite ? " elite" : "");
-      card.innerHTML =
-        '<div class="member-photo" style="background-image:url(' + m.image + ')"></div>' +
-        '<div class="member-name">' + m.nom + '</div>' +
-        '<div class="member-role">' + m.role + '</div>' +
-        '<a class="view-link" href="' + m.fiche + '" target="_blank" rel="noopener noreferrer">Voir la fiche</a>';
+      card.className = "card";
+      const lien = m.fiche || m.website || "#";
+      const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
+
+      card.innerHTML = `
+        <img src="${m.image}" alt="Photo de ${m.nom}">
+        <div class="nom">${m.nom}</div>
+        <div class="role">${roles}</div>
+        <a href="${lien}" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+      `;
+
       memberGrid.appendChild(card);
     });
 
+    // Scroll auto pour petits écrans
     if (window.innerWidth <= 768) {
       const y = memberGrid.getBoundingClientRect().top + window.scrollY;
       window.scrollTo({ top: y - 20, behavior: "smooth" });
     }
+  }
+
+  function showAll() {
+    renderMembers(membersData);
+    filtersDiv.style.display = "flex";
+    backButton.style.display = "none";
+
+    const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+    const offset = window.innerWidth > 768 ? 100 : 20;
+    window.scrollTo({ top: y - offset, behavior: "smooth" });
   }
 
   function filterBy(metier) {
@@ -279,22 +307,23 @@ document.addEventListener("DOMContentLoaded", function () {
       : membersData.filter(m =>
           Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
         );
+
     renderMembers(filtered);
+    filtersDiv.style.display = "none";
+    backButton.style.display = "block";
   }
 
-  backButton.addEventListener("click", () => {
-  const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
-  const offset = window.innerWidth > 768 ? 100 : 20;
-  window.scrollTo({ top: y - offset, behavior: "smooth" });
-});
-
+  // Création des boutons filtres
   uniqueFilters.forEach(metier => {
-  const btn = document.createElement("button");
-  btn.textContent = metier;
-  btn.onclick = () => filterBy(metier);
-  if (metier === "ELITE") btn.classList.add("elite-btn");
-  filtersDiv.appendChild(btn);
-});
+    const btn = document.createElement("button");
+    btn.textContent = metier;
+    btn.onclick = () => filterBy(metier);
+    if (metier === "ELITE") btn.classList.add("elite-btn");
+    filtersDiv.appendChild(btn);
+  });
 
-  console.log("✅ script-V4-final.js chargé avec", membersData.length, "membres");
+  backButton.addEventListener("click", showAll);
+  showAll();
+
+  console.log("✅ Script fusionné chargé avec", membersData.length, "membres");
 });
