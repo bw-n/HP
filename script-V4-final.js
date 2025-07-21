@@ -1,1 +1,300 @@
-function _0x4993(){const _0x236473=['image','elite-btn','Smart\x20Contract\x20Dev','✅\x20script-V4-final.js\x20chargé\x20avec','innerWidth','button','DOMContentLoaded','https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','11WVaLtS','Certains\x20éléments\x20HTML\x20manquent\x20:\x20vérifie\x20l\x27existence\x20des\x20IDs\x20filters,\x20member-grid\x20et\x20backButton.','scrollTo','AR/VR\x20Developer','Product\x20Designer','UX\x20Designer',')\x22></div>','Data\x20&\x20Intelligence\x20Artificielle','Blaze\x20Aurélien','Robert\x20Black','DevOps\x20Web3','length','click','div','\x20elite','membres','top','flatMap','Joseph\x20Lewis','Infrastructure\x20&\x20Cloud','fiche','65GBSBIH','ELITE','filter','getBoundingClientRect','Data\x20Analyst\x20&\x20AI','Communication\x20&\x20Community','log','warn','David\x20Lee','9drPgGJ','William\x20Turner','Web3\x20Frontend\x20Developer','some','163204eKwNoD','Cybersecurity\x20Specialist','scrollY','member-grid','</div>','push','Développement\x20Frontend','Game\x20Developer','414009GrjSdU','Blockchain\x20Advisor','19401564NUZrPM','onclick','XR\x20/\x20VR\x20Designer','Network\x20Engineer','Mia\x20Young','metier','appendChild','Blockchain\x20Architect','members','<p>Aucun\x20membre\x20trouvé.</p>','nom','<a\x20class=\x22view-link\x22\x20href=\x22','Blockchain\x20&\x20Smart\x20Contract','Daniel\x20Wilson','Cybersécurité','role','includes','<div\x20class=\x22member-photo\x22\x20style=\x22background-image:url(','Design\x20&\x20Création\x20Visuelle','50444uZKQPq','Olivia\x20King','6lnUlhD','5096434oodfQe','Laura\x20Adams','Emily\x20White','UX\x20/\x20UI\x20Design','\x22\x20target=\x22_blank\x22\x20rel=\x22noopener\x20noreferrer\x22>Voir\x20la\x20fiche</a>','innerHTML','getElementById','Ethical\x20Hacker','Motion\x20Designer','createElement','<div\x20class=\x22member-name\x22>','3006654rqTbqt','https://www.blockchain-workers.com/exemple-profil-premium.html','textContent','Chris\x20Miller','Sophia\x20Hall','Cloud\x20Architect','Community\x20Builder','James\x20Wright','elite','120SypfIC','Mobile\x20Developer','6685810yfZgjk','isArray','Michael\x20Johnson','forEach','addEventListener','Quantum\x20R&D'];_0x4993=function(){return _0x236473;};return _0x4993();}const _0x49a2cf=_0x72ae;function _0x72ae(_0x15cb0a,_0x399582){const _0x49932f=_0x4993();return _0x72ae=function(_0x72ae53,_0x5a54ab){_0x72ae53=_0x72ae53-0x1c1;let _0x3f0c2a=_0x49932f[_0x72ae53];return _0x3f0c2a;},_0x72ae(_0x15cb0a,_0x399582);}(function(_0x11cc95,_0x19b995){const _0x23ba2f=_0x72ae,_0x752ba4=_0x11cc95();while(!![]){try{const _0x5c1dac=-parseInt(_0x23ba2f(0x226))/0x1*(parseInt(_0x23ba2f(0x1c4))/0x2)+parseInt(_0x23ba2f(0x1ef))/0x3+-parseInt(_0x23ba2f(0x1e1))/0x4*(parseInt(_0x23ba2f(0x21d))/0x5)+-parseInt(_0x23ba2f(0x1e3))/0x6*(-parseInt(_0x23ba2f(0x1e4))/0x7)+parseInt(_0x23ba2f(0x1f8))/0x8*(parseInt(_0x23ba2f(0x1cc))/0x9)+-parseInt(_0x23ba2f(0x1fa))/0xa*(-parseInt(_0x23ba2f(0x208))/0xb)+-parseInt(_0x23ba2f(0x1ce))/0xc;if(_0x5c1dac===_0x19b995)break;else _0x752ba4['push'](_0x752ba4['shift']());}catch(_0x5f00ea){_0x752ba4['push'](_0x752ba4['shift']());}}}(_0x4993,0x8c116),window[_0x49a2cf(0x1d6)]=[{'nom':_0x49a2cf(0x210),'role':_0x49a2cf(0x202),'image':'https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1da),'elite':!![]},{'nom':'Sarah\x20Green','role':_0x49a2cf(0x20d),'image':'https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1e7)},{'nom':_0x49a2cf(0x1fc),'role':_0x49a2cf(0x1c5),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1dc)},{'nom':'Alice\x20Brown','role':_0x49a2cf(0x1c2),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1ca)},{'nom':_0x49a2cf(0x225),'role':_0x49a2cf(0x221),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':'Data\x20&\x20Intelligence\x20Artificielle'},{'nom':_0x49a2cf(0x1e6),'role':_0x49a2cf(0x1ec),'image':_0x49a2cf(0x207),'fiche':'https://www.blockchain-workers.com/exemple-profil-premium.html','metier':_0x49a2cf(0x1e0)},{'nom':_0x49a2cf(0x211),'role':_0x49a2cf(0x1d5),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1da)},{'nom':_0x49a2cf(0x1e5),'role':_0x49a2cf(0x20c),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1e7)},{'nom':_0x49a2cf(0x1f2),'role':_0x49a2cf(0x1f5),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x222)},{'nom':_0x49a2cf(0x1db),'role':_0x49a2cf(0x212),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':'Infrastructure\x20&\x20Cloud'},{'nom':_0x49a2cf(0x1e2),'role':_0x49a2cf(0x1f4),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x21b)},{'nom':_0x49a2cf(0x1f6),'role':_0x49a2cf(0x1f9),'image':'https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','fiche':_0x49a2cf(0x1f0),'metier':'Développement\x20Frontend'},{'nom':_0x49a2cf(0x1f3),'role':_0x49a2cf(0x1d1),'image':'https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','fiche':_0x49a2cf(0x1f0),'metier':'Cybersécurité'},{'nom':_0x49a2cf(0x1c1),'role':_0x49a2cf(0x1ff),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x20f)},{'nom':'Isabella\x20Clark','role':'Interaction\x20Designer','image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1e7)},{'nom':_0x49a2cf(0x21a),'role':_0x49a2cf(0x1cb),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1e0)},{'nom':_0x49a2cf(0x1d2),'role':_0x49a2cf(0x1d0),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1e0)},{'nom':'Benjamin\x20Scott','role':_0x49a2cf(0x20b),'image':'https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true','fiche':_0x49a2cf(0x1f0),'metier':'Design\x20&\x20Création\x20Visuelle'},{'nom':'Charlotte\x20Baker','role':_0x49a2cf(0x1eb),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1dc)},{'nom':'Jane\x20Doe','role':_0x49a2cf(0x1cd),'image':_0x49a2cf(0x207),'fiche':_0x49a2cf(0x1f0),'metier':_0x49a2cf(0x1da)}],document[_0x49a2cf(0x1fe)](_0x49a2cf(0x206),function(){const _0x31050e=_0x49a2cf,_0x38fc3a=window['members'],_0x8ab10a=_0x38fc3a[_0x31050e(0x219)](_0x377067=>Array[_0x31050e(0x1fb)](_0x377067['metier'])?_0x377067['metier']:[_0x377067[_0x31050e(0x1d3)]]),_0x411c18=_0x38fc3a[_0x31050e(0x1c3)](_0x4d64f9=>_0x4d64f9[_0x31050e(0x1f7)]);if(_0x411c18)_0x8ab10a[_0x31050e(0x1c9)](_0x31050e(0x21e));const _0x9f261d=[...new Set(_0x8ab10a)]['sort'](),_0x2958ed=document['getElementById']('filters'),_0x19720a=document[_0x31050e(0x1ea)](_0x31050e(0x1c7)),_0x51235a=document['getElementById']('backButton');if(!_0x2958ed||!_0x19720a||!_0x51235a){console[_0x31050e(0x224)](_0x31050e(0x209));return;}function _0x47f1ee(_0x53eb6a){const _0x580de1=_0x31050e;_0x19720a[_0x580de1(0x1e9)]='';if(_0x53eb6a[_0x580de1(0x213)]===0x0){_0x19720a[_0x580de1(0x1e9)]=_0x580de1(0x1d7);return;}_0x53eb6a[_0x580de1(0x1fd)](_0x362b03=>{const _0x2bae13=_0x580de1,_0x2e2f37=document['createElement'](_0x2bae13(0x215));_0x2e2f37['className']='member-block'+(_0x362b03[_0x2bae13(0x1f7)]?_0x2bae13(0x216):''),_0x2e2f37[_0x2bae13(0x1e9)]=_0x2bae13(0x1df)+_0x362b03[_0x2bae13(0x200)]+_0x2bae13(0x20e)+_0x2bae13(0x1ee)+_0x362b03[_0x2bae13(0x1d8)]+'</div>'+'<div\x20class=\x22member-role\x22>'+_0x362b03[_0x2bae13(0x1dd)]+_0x2bae13(0x1c8)+_0x2bae13(0x1d9)+_0x362b03[_0x2bae13(0x21c)]+_0x2bae13(0x1e8),_0x19720a[_0x2bae13(0x1d4)](_0x2e2f37);});if(window['innerWidth']<=0x300){const _0x291ac7=_0x19720a[_0x580de1(0x220)]()[_0x580de1(0x218)]+window[_0x580de1(0x1c6)];window[_0x580de1(0x20a)]({'top':_0x291ac7-0x14,'behavior':'smooth'});}}function _0x309aba(_0x29da35){const _0x2bcf90=_0x31050e,_0x3c52fe=_0x29da35==='ELITE'?_0x38fc3a['filter'](_0x1cb445=>_0x1cb445[_0x2bcf90(0x1f7)]):_0x38fc3a[_0x2bcf90(0x21f)](_0x2c9049=>Array[_0x2bcf90(0x1fb)](_0x2c9049[_0x2bcf90(0x1d3)])?_0x2c9049['metier'][_0x2bcf90(0x1de)](_0x29da35):_0x2c9049[_0x2bcf90(0x1d3)]===_0x29da35);_0x47f1ee(_0x3c52fe);}_0x51235a[_0x31050e(0x1fe)](_0x31050e(0x214),()=>{const _0x4da09a=_0x31050e,_0x36e476=_0x2958ed[_0x4da09a(0x220)]()[_0x4da09a(0x218)]+window[_0x4da09a(0x1c6)],_0x53e38e=window[_0x4da09a(0x204)]>0x300?0x64:0x14;window[_0x4da09a(0x20a)]({'top':_0x36e476-_0x53e38e,'behavior':'smooth'});}),_0x9f261d['forEach'](_0x33df0e=>{const _0x5274ca=_0x31050e,_0x524f17=document[_0x5274ca(0x1ed)](_0x5274ca(0x205));_0x524f17[_0x5274ca(0x1f1)]=_0x33df0e,_0x524f17[_0x5274ca(0x1cf)]=()=>_0x309aba(_0x33df0e);if(_0x33df0e===_0x5274ca(0x21e))_0x524f17['classList']['add'](_0x5274ca(0x201));_0x2958ed[_0x5274ca(0x1d4)](_0x524f17);}),console[_0x31050e(0x223)](_0x31050e(0x203),_0x38fc3a[_0x31050e(0x213)],_0x31050e(0x217));}));
+// DONNÉES DES MEMBRES
+window.members = [
+  {
+    nom: "Your Name",
+    role: "Smart Contract Dev",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract",
+    elite: true
+  },
+  {
+    nom: "your Name",
+    role: "Smart Contract Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Solidity Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Rust Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Architect",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Consensus Algorithm Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "ZKP Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Frontend Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Frontend"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Backend Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Backend"
+  },
+  {
+    nom: "your Name",
+    role: "Web3 Fullstack Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Fullstack"
+  },
+  {
+    nom: "your Name",
+    role: "Mobile Web3 Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Mobile"
+  },
+  {
+    nom: "your Name",
+    role: "dApp Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Applications Décentralisées"
+  },
+  {
+    nom: "your Name",
+    role: "DevOps Web3 Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Cloud Architect",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Site Reliability Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Network Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  },
+  {
+    nom: "your Name",
+    role: "Cybersecurity Specialist",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Smart Contract Auditor",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Penetration Tester (Web3)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Ethical Hacker",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Forensics Analyst",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Cybersécurité"
+  },
+  {
+    nom: "your Name",
+    role: "Data Analyst (on-chain)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "Blockchain Data Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "AI & ML Engineer (Web3)",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Data & Intelligence Artificielle"
+  },
+  {
+    nom: "your Name",
+    role: "Protocol Researcher",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Cryptography Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Quantum R&D Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Recherche & R&D"
+  },
+  {
+    nom: "your Name",
+    role: "Oracle Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Bridge Developer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Blockchain & Smart Contract"
+  },
+  {
+    nom: "your Name",
+    role: "Integration Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Développement Backend"
+  },
+  {
+    nom: "your Name",
+    role: "Middleware Engineer",
+    image: "https://github.com/bw-n/HP/blob/main/images/logo_BW_WEB_200x200.jpg?raw=true",
+    fiche: "https://www.blockchain-workers.com/exemple-profil-premium.html",
+    metier: "Infrastructure & Cloud"
+  }
+];
+
+// Logique du Hub
+document.addEventListener("DOMContentLoaded", function () {
+  const membersData = window.members;
+
+  const allMetiers = membersData.flatMap(m =>
+    Array.isArray(m.metier) ? m.metier : [m.metier]
+  );
+
+  // Ajouter "ELITE" comme filtre si au moins un membre est elite
+  const hasElite = membersData.some(m => m.elite);
+  if (hasElite) allMetiers.push("ELITE");
+
+  const uniqueFilters = [...new Set(allMetiers)].sort();
+
+  const filtersDiv = document.getElementById("filters");
+  const memberGrid = document.getElementById("member-grid");
+  const backButton = document.getElementById("backButton");
+
+  if (!filtersDiv || !memberGrid || !backButton) {
+    console.warn("Certains éléments HTML manquent : vérifie l'existence des IDs filters, member-grid et backButton.");
+    return;
+  }
+
+  function renderMembers(list) {
+    memberGrid.innerHTML = "";
+    if (list.length === 0) {
+      memberGrid.innerHTML = "<p>Aucun membre trouvé.</p>";
+      return;
+    }
+    list.forEach(m => {
+      const card = document.createElement("div");
+      card.className = "member-block" + (m.elite ? " elite" : "");
+      card.innerHTML =
+        '<div class="member-photo" style="background-image:url(' + m.image + ')"></div>' +
+        '<div class="member-name">' + m.nom + '</div>' +
+        '<div class="member-role">' + m.role + '</div>' +
+        '<a class="view-link" href="' + m.fiche + '" target="_blank" rel="noopener noreferrer">Voir la fiche</a>';
+      memberGrid.appendChild(card);
+    });
+
+    if (window.innerWidth <= 768) {
+      const y = memberGrid.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: y - 20, behavior: "smooth" });
+    }
+  }
+
+  function filterBy(metier) {
+    const filtered = metier === "ELITE"
+      ? membersData.filter(m => m.elite)
+      : membersData.filter(m =>
+          Array.isArray(m.metier) ? m.metier.includes(metier) : m.metier === metier
+        );
+    renderMembers(filtered);
+  }
+
+  backButton.addEventListener("click", () => {
+  const y = filtersDiv.getBoundingClientRect().top + window.scrollY;
+  const offset = window.innerWidth > 768 ? 100 : 20;
+  window.scrollTo({ top: y - offset, behavior: "smooth" });
+});
+
+  uniqueFilters.forEach(metier => {
+  const btn = document.createElement("button");
+  btn.textContent = metier;
+  btn.onclick = () => filterBy(metier);
+  if (metier === "ELITE") btn.classList.add("elite-btn");
+  filtersDiv.appendChild(btn);
+});
+
+  console.log("✅ script-V4-final.js chargé avec", membersData.length, "membres");
+});
