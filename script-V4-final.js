@@ -269,22 +269,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     list.forEach(m => {
-      const card = document.createElement("div");
-      card.className = "member-block";
-      if (m.elite) card.classList.add("elite");
+  const card = document.createElement("div");
+  card.className = "member-block" + (m.elite ? " elite" : "");
 
-      const lien = m.fiche || m.website || "#";
-      const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
+  const lien = m.fiche || m.website || "#";
+  const roles = Array.isArray(m.role) ? m.role.join(", ") : m.role;
 
-      card.innerHTML = `
-        <div class="member-photo" style="background-image: url('${m.image}')"></div>
-        <div class="member-name">${m.nom}</div>
-        <div class="member-role">${roles}</div>
-        <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
-      `;
+  card.innerHTML = `
+    <div class="member-photo" style="background-image: url('${m.image}')"></div>
+    <div class="member-name">${m.nom}</div>
+    <div class="member-role">${roles}</div>
+    <a href="${lien}" class="view-link" target="_blank" rel="noopener noreferrer">Voir la fiche</a>
+  `;
 
-      memberGrid.appendChild(card);
-    });
+  memberGrid.appendChild(card);
+});
+
 
     // Scroll auto sur mobile
     if (window.innerWidth <= 768) {
