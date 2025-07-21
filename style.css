@@ -190,23 +190,3 @@ h1 {
   box-shadow: 0 0 10px gold;
   border-color: gold;
 }
-.member-block.elite {
-  border: 2px solid gold;
-  background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
-  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
-  position: relative;
-}
-
-.member-block.elite::before {
-  content: "ELITE";
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: gold;
-  color: #121212;
-  font-weight: bold;
-  font-size: 0.75rem;
-  padding: 4px 8px;
-  border-radius: 4px;
-  box-shadow: 0 0 5px gold;
-}
